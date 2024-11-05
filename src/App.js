@@ -4,6 +4,7 @@ import Why_Trade from "./components/Why_Trade/Why_Trade";
 import What_Trade from "./components/What_Trade/What_Trade";
 import Before__Footer__Form from "./components/Before__Footer__Form/Before__Footer__Form";
 import Employers from "./components/Employers/Employers";
+import Map from "./components/Map/Map";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <What_Trade/>
         <Before__Footer__Form/>
         <Employers/>
+        <Map/>
       </main>
     </>
   );

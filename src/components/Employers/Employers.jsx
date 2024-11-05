@@ -28,7 +28,7 @@ const employers_data = [
 
 const Employers = () => {
     return (
-        <div className="employers py-10 sm:py-16 bg-gray-50 text-gray-800">
+        <div className="employers py-10 sm:py-16 text-gray-800">
             <div className="max-w-screen-xl mx-auto px-2 md:px-6 lg:px-8 xl:px-0">
                 <div className="title text-center mb-6">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">

@@ -14,7 +14,7 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!agreed) {
-            toast.error("Please agree to the terms and conditions before signing in.");
+            toast.error("Please agree to the terms and conditions before subsribing.");
             return;
         } else {
             toast.success("Corect");
