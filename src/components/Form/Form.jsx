@@ -49,7 +49,7 @@ const Form = () => {
                         </label>
                     </div>
                     <div className="confirm__18 max-w-lg text-xs text-center md:text-start">
-                        <p>By pressing "Sign up", you confirm that you are 18 or older. You understand that we may use your email address to send you information about CGL products and services as well as market news</p>
+                        <p>By pressing "Subscribe", you confirm that you are 18 or older. You understand that we may use your email address to send you information about CGL products and services as well as market news</p>
                     </div>
                 </form>
 
