@@ -15,6 +15,7 @@ const Map = () => {
                     allowFullScreen
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=26%20Berrycroft%20Lane%20Romiley%2C%20Stockport%2C%20Cheshire%2C%20United%20Kingdom%2C%20SK6%203AU&zoom=10&maptype=roadmap"
                     className="border-0"
+                    title="company address"
                 ></iframe>
             </div>
         </div>

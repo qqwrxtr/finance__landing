@@ -1,26 +1,29 @@
 import Header from "./components/Header/Header";
-import Form from "./components/Form/Form";
-import Why_Trade from "./components/Why_Trade/Why_Trade";
-import What_Trade from "./components/What_Trade/What_Trade";
-import Before__Footer__Form from "./components/Before__Footer__Form/Before__Footer__Form";
-import Employers from "./components/Employers/Employers";
-import Map from "./components/Map/Map";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PrivacyPolicy from "./components/Pages/Privacy_Policy/Privacy_Policy";
+import TermsConditions from "./components/Pages/TermsConditions/Terms";
+import ContactUs from "./components/Pages/Contact_Us/Contact_Us";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <>
+    <Router>
       <header>
-        <Header/>
+        <Header />
       </header>
       <main>
-        <Form/>
-        <Why_Trade/>
-        <What_Trade/>
-        <Before__Footer__Form/>
-        <Employers/>
-        <Map/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
       </main>
-    </>
+      <footer>
+        <Footer />
+      </footer>
+    </Router>
   );
 }
 

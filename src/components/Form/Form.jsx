@@ -1,23 +1,20 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import background from "./../../assets/123.png";
-import Terms_Conditions from "./../Terms_Condition/Terms_Conditions";
 
 const Form = () => {
     const [agreed, setAgreed] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-
-    const handleShowTerms = () => setShowModal(true);
-    const handleCloseTerms = () => setShowModal(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!agreed) {
-            toast.error("Please agree to the terms and conditions before subsribing.");
+            toast.error("Please agree to the terms and conditions before subscribing.");
             return;
         } else {
-            toast.success("Corect");
+            toast.success("Subscription successful!");
             return;
         }
     };
@@ -45,33 +42,20 @@ const Form = () => {
                     <div className="agree pb-6 text-center md:text-start text-xs md:text-md">
                         <input type="checkbox" id="agree" name="agree" checked={agreed} onChange={() => setAgreed(!agreed)} />
                         <label htmlFor="agree" className="pl-2">
-                            I agree to the <button type="button" onClick={handleShowTerms} className="text-[#fc291d] underline">terms and conditions</button>
+                            I agree to the{" "}
+                            <button
+                                type="button"
+                                onClick={() => navigate("/terms-conditions")}
+                                className="text-[#fc291d] underline"
+                            >
+                                terms and conditions
+                            </button>
                         </label>
                     </div>
                     <div className="confirm__18 max-w-lg text-xs text-center md:text-start">
-                        <p>By pressing "Subscribe", you confirm that you are 18 or older. You understand that we may use your email address to send you information about CGL products and services as well as market news</p>
+                        <p>By pressing "Subscribe", you confirm that you are 18 or older. You understand that we may use your email address to send you information about CGL products and services as well as market news.</p>
                     </div>
                 </form>
-
-                {showModal && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                        <div className="bg-white w-full max-w-xl p-6 pt-0 rounded-lg shadow-lg overflow-y-auto max-h-[90vh]">
-                            <div className="sticky top-0 bg-white flex justify-between items-center py-4 border-b border-gray-200 z-10">
-                                <h2 className="text-xl font-bold">Terms and Conditions</h2>
-                                <button
-                                    onClick={handleCloseTerms}
-                                    className="bg-[#fc291d] text-white px-4 py-2 rounded hover:bg-[#e7453c] transition ease-in-out duration-300 shadow-lg"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                            <div className="mt-4">
-                                <Terms_Conditions />
-                            </div>
-                        </div>
-                    </div>
-                )}
-
             </div>
         </>
     );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Before__Footer__Form = () => {
+const Contact_Us = () => {
     const [agreed, setAgreed] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -61,7 +61,7 @@ const Before__Footer__Form = () => {
                             <p>If you have any questions or need further assistance, feel free to reach out to us. We’re here to help!</p>
                         </div>
                         
-                        <div className="form__capture__name text-sm rounded-md flex justify-center overflow-auto text-black w-full px-3 sm:px-0">
+                        <div className="form__capture__name text-sm rounded-md flex justify-center text-black w-full px-3 sm:px-0">
                             <input
                                 type="text"
                                 name="name"
@@ -72,7 +72,7 @@ const Before__Footer__Form = () => {
                             />
                         </div>
                         
-                        <div className="form__capture__email text-sm rounded-md flex justify-center overflow-auto text-black w-full px-3 sm:px-0 mt-4">
+                        <div className="form__capture__email text-sm rounded-md flex justify-center text-black w-full px-3 sm:px-0 mt-4">
                             <input
                                 type="email"
                                 name="email"
@@ -83,7 +83,7 @@ const Before__Footer__Form = () => {
                             />
                         </div>
 
-                        <div className="form__capture__subject text-sm rounded-md flex justify-center overflow-auto text-black w-full px-3 sm:px-0 mt-4">
+                        <div className="form__capture__subject text-sm rounded-md flex justify-center text-black w-full px-3 sm:px-0 mt-4">
                             <input
                                 type="text"
                                 name="subject"
@@ -94,7 +94,7 @@ const Before__Footer__Form = () => {
                             />
                         </div>
 
-                        <div className="form__capture__message text-sm rounded-md flex justify-center overflow-auto text-black w-full px-3 sm:px-0 mt-4">
+                        <div className="form__capture__message text-sm rounded-md flex justify-center text-black w-full px-3 sm:px-0 mt-4">
                             <textarea
                                 name="message"
                                 placeholder="Your Message"
@@ -117,4 +117,4 @@ const Before__Footer__Form = () => {
     );
 };
 
-export default Before__Footer__Form;
+export default Contact_Us;
