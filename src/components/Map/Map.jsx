@@ -13,7 +13,7 @@ const Map = () => {
                     height="100%"
                     loading="lazy"
                     allowFullScreen
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=26%20Berrycroft%20Lane%20Romiley%2C%20Stockport%2C%20Cheshire%2C%20United%20Kingdom%2C%20SK6%203AU&zoom=10&maptype=roadmap"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Bold%20Bauhaus%2C%2027%20Quay%20Street%2C%20Manchester%2C%20United%20Kingdom%2C%20M3%203GY&zoom=10&maptype=roadmap"
                     className="border-0"
                     title="company address"
                 ></iframe>
