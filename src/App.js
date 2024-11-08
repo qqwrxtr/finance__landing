@@ -5,10 +5,12 @@ import PrivacyPolicy from "./components/Pages/Privacy_Policy/Privacy_Policy";
 import TermsConditions from "./components/Pages/TermsConditions/Terms";
 import ContactUs from "./components/Pages/Contact_Us/Contact_Us";
 import Home from "./components/Home/Home";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <Router>
+      <Toaster position="bottom-right" />
       <header>
         <Header />
       </header>
