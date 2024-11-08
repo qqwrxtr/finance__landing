@@ -69,7 +69,7 @@ const TermsOfService = () => {
                     </p>
                     <p className="text-gray-300">Email: support@cglimited.org</p>
                     <p className="text-gray-300">
-                        Address: 26 Berrycroft Lane, Romiley, Stockport, Cheshire, United Kingdom SK6 3AU
+                        Address: Bold Bauhaus, 27 Quay Street, Manchester, United Kingdom, M3 3GY
                     </p>
                 </section>
             </div>

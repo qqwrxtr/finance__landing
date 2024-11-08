@@ -5,7 +5,7 @@ const Map = () => {
                 <p>Where to find us?</p>
             </div>
             <div className="address text-center text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mt-4">
-                <p>26 Berrycroft Lane, Romiley, Stockport, Cheshire, United Kingdom, SK6 3AU</p>
+                <p>Bold Bauhaus, 27 Quay Street, Manchester, United Kingdom, M3 3GY</p>
             </div>
             <div className="mapswrapper w-full max-w-screen-xl h-64 sm:h-80 md:h-96 lg:h-[600px] rounded-lg overflow-hidden shadow-lg my-6">
                 <iframe
