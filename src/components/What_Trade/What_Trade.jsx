@@ -49,7 +49,7 @@ const What_Help = () => {
     return ( 
         <div className="what_help flex py-10 w-full justify-center text-center px-2 md:px-6 lg:px-8 xl:px-0">
             <div className="items-center max-w-screen-xl flex flex-col">    
-                <div className="title text-3xl sm:text-4xl md:text-4xl font-semibold mb-6">
+                <div className="title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                     <p>How We Can Help You</p>
                 </div>
                 <div className="help__info grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-0 ">

@@ -3,7 +3,7 @@ const Why_ChooseUs = () => {
         <div className="why_choose_us py-10 sm:py-16 text-black">
             <div className="max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-0">
                 <div className="title text-center mb-8">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold ">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                         Why Choose Clearpath Group Limited?
                     </h2>
                     <p className="mt-4 text-xl sm:text-2xl ">
