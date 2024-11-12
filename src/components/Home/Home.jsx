@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
       <Form />
-      <Why_Trade />
       <What_Trade />
+      <Why_Trade />
       <Contact_Us_Form />
       <Employers />
       <Map />

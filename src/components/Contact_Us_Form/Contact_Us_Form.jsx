@@ -46,7 +46,7 @@ const Contact_Us = () => {
     };
 
     return (
-        <div className="contact-method flex py-10 w-full justify-center text-center bg-[#121212] mt-10">
+        <div className="contact-method flex py-10 w-full justify-center text-center bg-[#121212]">
             <div className="form flex relative">
                 <form onSubmit={handleSubmit} className="form relative z-10 bg-opacity-10 text-white w-full flex flex-col items-center md:block">
                     <div className="form__title text-2xl sm:text-4xl text-center md:text-5xl font-bold">
@@ -95,7 +95,7 @@ const Contact_Us = () => {
                         />
                     </div>
                     <div className="sign__in py-6 w-full px-3 sm:px-0">
-                        <button type="submit" className="bg-[#fc291d] hover:bg-[#e7453c] text-white font-bold py-2 px-4 rounded w-full max-w-lg">Send Message</button>
+                        <button type="submit" className="bg-[#fc291d] hover:bg-[#e7453c] text-white font-bold py-2 px-4 rounded w-full max-w-lg hover:scale-105 duration-300">Send Message</button>
                     </div>
                     <div className="confirm__18 text-xs text-center">
                         <p>By submitting this form, you agree that we may contact you regarding your inquiry and send you updates about our services.</p>

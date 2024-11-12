@@ -1,60 +1,66 @@
-import first from "./../../assets/111.jpg"
-import second from "./../../assets/222.jpg"
-import third from "./../../assets/333.jpg"
-import forth from "./../../assets/444.jpg"
-import fith from "./../../assets/555.jpg"
+import first from "./../../assets/111.svg";
+import second from "./../../assets/222.svg";
+import third from "./../../assets/333.svg";
+import forth from "./../../assets/444.svg";
+import fith from "./../../assets/555.svg";
+import six from "./../../assets/666.svg";
 
-const what_trade = [
+const what_help = [
     {
         "id": 1,
-        "name": "Forex",
-        "description": "Take part in the world's largest financial market with over $5 trillion daily trades. Choose between long-term or day trading on forex with a regulated online forex broker trusted by millions.",
-        img:first
+        "name": "Investing",
+        "description": "Create an investment strategy to help you achieve your long-term financial goals.",
+        img: first
     },
     {
-        "id":2,
-        "name": "Stocks & Indices",
-        "description": "Diversify your risk by trading the world's top performing stocks & indices. Our stocks & indices offer competitively priced equities and assets that you can trade outside the regular hours of major stock markets.",
-        img:second
+        "id": 2,
+        "name": "Budget",
+        "description": "Build a personalized spending plan to track your finances and align your priorities, including reducing debt.",
+        img: second
     },
     {
-        "id":3,
-        "name": "Commodities",
-        "description": "You can trade commodities like gold, silver, crude oil & other assets. Profit from the price difference when the commodity market moves in your favour.",
-        img:third
+        "id": 3,
+        "name": "Retirement",
+        "description": "Plan effectively for retirement, ensuring you can live comfortably in the future without compromising your current lifestyle.",
+        img: third
     },
     {
-        "id":4,
-        "name": "Derived",
-        "description": "Trade on asset prices derived from real-world or simulated markets. Manage your exposure by selecting the volatility level to suit your risk appetite. Choose from our 24/7 synthetics and derived.",
-        img:forth
+        "id": 4,
+        "name": "Insurance",
+        "description": "Ensure you have the right insurance policies to protect you and your loved ones from unexpected life events.",
+        img: forth
     },
     {
-        "id":5,
-        "name": "Cryptocurrencies",
-        "description": "Crypto trading allows you to benefit from correctly predicting the price movements of cryptocurrencies without owning them.",
-        img:fith
+        "id": 5,
+        "name": "Stewardship",
+        "description": "Handle your finances responsibly, using principles of wisdom and generosity.",
+        img: fith
+    },
+    {
+        "id": 6,
+        "name": "Family",
+        "description": "Secure your family’s future by planning for education, inheritance, and other key life events.",
+        img: six
     }
-]
+];
 
-const What_Trade = () => {
+
+const What_Help = () => {
     return ( 
-        <div className="what_trade flex py-10 w-full justify-center text-center">
+        <div className="what_help flex py-10 w-full justify-center text-center px-2 md:px-6 lg:px-8 xl:px-0">
             <div className="items-center max-w-screen-xl flex flex-col">    
                 <div className="title text-3xl sm:text-4xl md:text-4xl font-semibold mb-6">
-                    <p>Trade whatever you want</p>
+                    <p>How We Can Help You</p>
                 </div>
-                <div className="trade__info space-y-8">
-                    {what_trade.map((item, index) => (
+                <div className="help__info grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-0 ">
+                    {what_help.map((item) => (
                         <div
                             key={item.id}
-                            className={`flex flex-col-reverse ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-start md:items-center text-left space-y-4 md:space-y-0 px-4 md:px-0`}
+                            className="flex flex-col items-center text-center p-4 rounded-lg shadow-md hover:scale-105 duration-300"
                         >
-                            <img src={item.img} alt={item.name} className="w-full md:w-1/2 rounded-lg shadow-md " />
-                            <div className="text-container md:w-1/2 text-center md:text-left md:px-4 md:pb-0 pb-2">
-                                <h3 className="text-xl font-semibold">{item.name}</h3>
-                                <p className="mt-2 text-gray-600 text-base md:text-lg">{item.description}</p>
-                            </div>
+                            <img src={item.img} alt={item.name} className="w-16 h-16 mb-4" />
+                            <h3 className="text-xl font-semibold">{item.name}</h3>
+                            <p className="mt-2 text-gray-600 text-base md:text-lg">{item.description}</p>
                         </div>
                     ))}
                 </div>
@@ -63,4 +69,4 @@ const What_Trade = () => {
     );
 }
 
-export default What_Trade;
+export default What_Help;
