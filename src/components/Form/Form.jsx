@@ -34,6 +34,11 @@ const Form = () => {
             return;
         }
 
+        if (phoneNumber.trim() === "") {
+            toast.error("Please enter your phone number.");
+            return;
+        }
+
         if (!agreed) {
             toast.error("Please agree to the terms and conditions.");
             return;
