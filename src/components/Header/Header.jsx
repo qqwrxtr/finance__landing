@@ -22,7 +22,7 @@ const Header = () => {
             <div className="email flex items-center">
                 <a
                     href="mailto:support@cglimited.org"
-                    className="flex items-center gap-3 px-3 py-2 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md hover:bg-opacity-30 transition-all duration-300"
+                    className="flex items-center gap-3 px-3 py-2 hover:scale-105 duration-300"
                 >
                     <div className="email__img w-6 sm:w-8">
                         <img
