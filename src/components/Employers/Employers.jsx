@@ -111,7 +111,7 @@ const WorkSteps = () => {
                     <p className="text-3xl sm:text-4xl font-semibold text-white">{step.id}</p>
                   </div>
                   <div className="step-title pl-2 sm:pl-7">
-                    <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">{step.title}</p>
+                    <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white pr-3">{step.title}</p>
                   </div>
                 </div>
                 <div className="toggle-button-details">
