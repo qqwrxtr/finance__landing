@@ -3,19 +3,21 @@ import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="privacy-policy flex flex-col items-center px-6 py-10 sm:px-12 lg:px-24 bg-[#242424] text-white min-h-screen">
-            <div className="w-full max-w-4xl flex justify-between items-center mb-4">
-                <Link to="/" className="text-[#fc291d] hover:underline">
+        <div className="privacy-policy flex flex-col items-center px-6 py-10 sm:px-12 lg:px-24 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 text-white min-h-screen">
+            <div className="w-full max-w-7xl flex justify-between items-center mb-4">
+                <Link to="/" className="text-yellow-300 hover:underline text-lg sm:text-xl">
                     ← Go Back
                 </Link>
             </div>
-            <hr className="w-full max-w-4xl border-t border-gray-700 mb-8" />
+            <hr className="w-full max-w-7xl border-t border-white-700 mb-8" />
 
-            <div className="content w-full max-w-4xl space-y-8 text-left">
-                <h1 className="text-3xl md:text-5xl font-extrabold text-[#fc291d] text-center">Privacy Policy</h1>
+            <div className="content w-full max-w-7xl space-y-8 text-left bg-white bg-opacity-10 p-10 rounded-lg">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-6 drop-shadow-lg">
+                    Privacy Policy
+                </h1>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">Introduction</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">Introduction</h2>
                     <p className="text-gray-300 leading-relaxed">
                         At Clearpath Group Limited ("we," "us," or "our"), we respect your privacy and are committed to
                         protecting your personal information. This Privacy Policy explains how we collect, use, and share
@@ -29,7 +31,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">1. Information We Collect</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">1. Information We Collect</h2>
                     <div className="space-y-2">
                         <h3 className="font-semibold">1.1. Personal Data You Provide</h3>
                         <p className="text-gray-300 leading-relaxed">
@@ -46,7 +48,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">2. How We Use Your Information</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">2. How We Use Your Information</h2>
                     <p className="text-gray-300 leading-relaxed">
                         We use your personal data for the following purposes:
                     </p>
@@ -60,7 +62,7 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">3. How We Share Your Information</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">3. How We Share Your Information</h2>
                     <p className="text-gray-300 leading-relaxed">
                         We may share your personal data with:
                     </p>
@@ -75,21 +77,21 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">4. Data Security</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">4. Data Security</h2>
                     <p className="text-gray-300 leading-relaxed">
                         We take the security of your personal information seriously and have implemented appropriate technical and organizational measures to protect it from unauthorized access, loss, misuse, or alteration. However, no method of data transmission or storage is 100% secure, and we cannot guarantee absolute security.
                     </p>
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">5. Data Retention</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">5. Data Retention</h2>
                     <p className="text-gray-300 leading-relaxed">
                         We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, or to comply with legal, regulatory, or contractual obligations. When your data is no longer needed, we will securely delete or anonymize it.
                     </p>
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">6. Your Data Protection Rights</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">6. Your Data Protection Rights</h2>
                     <p className="text-gray-300 leading-relaxed">
                         Under the General Data Protection Regulation (GDPR), you have the following rights:
                     </p>
@@ -108,21 +110,21 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">7. International Data Transfers</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">7. International Data Transfers</h2>
                     <p className="text-gray-300 leading-relaxed">
                         As a company based in the United Kingdom, your data may be transferred to and processed in countries outside the European Economic Area (EEA). When we transfer data outside the EEA, we ensure that appropriate safeguards are in place to protect your personal information, in accordance with GDPR requirements.
                     </p>
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">8. Children's Privacy</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">8. Children's Privacy</h2>
                     <p className="text-gray-300 leading-relaxed">
                         Our Site is not intended for children under the age of 18, and we do not knowingly collect personal data from minors. If we become aware that a child has provided us with personal data, we will take steps to delete such information.
                     </p>
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">9. Changes to This Privacy Policy</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">9. Changes to This Privacy Policy</h2>
                     <p className="text-gray-300 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by posting the updated policy on our Site with an updated "Effective Date."
                     </p>
@@ -132,16 +134,15 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section className="space-y-4">
-                    <h2 className="text-2xl font-bold text-[#f0f0f0]">10. Contact Us</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#f0f0f0]">10. Contact Us</h2>
                     <p className="text-gray-300 leading-relaxed">
-                        If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
+                        If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
                     </p>
-                    <p className="text-gray-300 leading-relaxed">
-                        <strong>Email:</strong> support@cglimited.org
-                    </p>
-                    <p className="text-gray-300 leading-relaxed">
-                        <strong>Address:</strong> Clearpath Group Limited, 123 Business Street, London, UK
-                    </p>
+                    <ul className="list-none pl-0 text-gray-300">
+                        <li>Email: privacy@cglimited.org</li>
+                        <li>Phone: +44 123 456 789</li>
+                        <li>Address: Clearpath Group Limited, 123 Privacy St., London, UK</li>
+                    </ul>
                 </section>
             </div>
         </div>

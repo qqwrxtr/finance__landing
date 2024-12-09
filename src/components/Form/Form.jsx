@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import background from "./../../assets/download.svg";
 
 const Form = () => {
     const [name, setName] = useState("");
@@ -11,20 +10,17 @@ const Form = () => {
 
     const handlePhoneNumberChange = (e) => {
         let input = e.target.value.replace(/\D/g, "");
-        
+
         if (input.length <= 3) {
             input = input;
         } else if (input.length <= 6) {
             input = input.slice(0, 3) + "-" + input.slice(3, 6);
-        } else if (input.length <= 9) {
-            input = input.slice(0, 3) + "-" + input.slice(3, 6) + "-" + input.slice(6, 9);
         } else {
-            input = input.slice(0, 3) + "-" + input.slice(3, 6) + "-" + input.slice(6, 9) + "-" + input.slice(9, 13);
+            input = input.slice(0, 3) + "-" + input.slice(3, 6) + "-" + input.slice(6, 10);
         }
-    
+
         setPhoneNumber(input);
     };
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -51,68 +47,64 @@ const Form = () => {
     };
 
     return (
-        <>
-            <div className="form flex min-h-[600px] md:min-h-[750px] relative">
-                <div className="background__form -z-10 absolute top-0 left-0 w-full h-full bg-[#121212]">
-                    <img src={background} alt="" className="w-full h-full object-cover brightness-50 md:brightness-100" />
-                </div>
-                <div className="flex text-white flex-col items-center justify-center w-full -mt-6 px-4">
-                    <div className="introduction__text lg:pb-10">
-                        <div className="form__title text-2xl sm:text-4xl text-center md:text-5xl xl:text-6xl font-bold max-w-full">
-                            <p>Get Financial Advice from Our Experts</p>
-                        </div>
-                        <div className="form__undertitle py-5 sm:py-3 text-xs sm:text-sm md:text-base xl:text-lg max-w-full text-center">
-                            <p>Receive personalized financial guidance on investments, retirement planning, and asset management.</p>
-                        </div>
+        <div className="form min-h-[600px] md:min-h-[750px] flex items-center justify-center relative bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600">
+            <div className="w-full max-w-screen-xl p-6 sm:p-8 lg:p-12 text-white bg-white/10 backdrop-blur-lg rounded-xl shadow-2xl py-8 sm:py-12 lg:py-16 m-4 sm:m-8 lg:m-12">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">
+                    Get Financial Advice from Our Experts
+                </h1>
+                <p className="text-sm sm:text-base lg:text-lg text-center mb-8">
+                    Receive personalized financial guidance on investments, retirement planning, and asset management.
+                </p>
+                <form onSubmit={handleSubmit} className="flex flex-col items-center w-full space-y-4">
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="w-full sm:w-4/5 lg:w-3/5 p-3 sm:p-4 text-black rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Phone Number (e.g., 123-456-7890)"
+                        value={phoneNumber}
+                        onChange={handlePhoneNumberChange}
+                        className="w-full sm:w-4/5 lg:w-3/5 p-3 sm:p-4 text-black rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+
+                    <button
+                        type="submit"
+                        className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 active:scale-95 transition duration-300 w-full sm:w-4/5 lg:w-3/5"
+                    >
+                        Request Consultation
+                    </button>
+
+                    <div className="flex flex-row items-center justify-center sm:w-4/5 lg:w-3/5 text-sm sm:text-base">
+                        <input
+                            type="checkbox"
+                            id="agree"
+                            name="agree"
+                            checked={agreed}
+                            onChange={() => setAgreed(!agreed)}
+                            className="mr-2 w-4 h-4 sm:w-5 sm:h-5 focus:ring focus:ring-indigo-400"
+                        />
+                        <label htmlFor="agree" className="text-center sm:text-left text-xs sm:text-base md:text-">
+                            I agree to the{" "}
+                            <button
+                                type="button"
+                                onClick={() => navigate("/terms-conditions")}
+                                className="text-yellow-300 underline"
+                            >
+                                terms and conditions
+                            </button>
+                        </label>
                     </div>
-                    <form onSubmit={handleSubmit} className="form relative z-10 bg-opacity-10 text-white w-full flex flex-col items-center justify-center px-4">
-                        <div className="form__capture__name text-sm max-w-lg rounded-md overflow-auto text-black w-full px-3 sm:px-0 mb-4">
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                className="pl-2 px-3 py-3 w-full rounded"
-                            />
-                        </div>
-                        <div className="form__capture__phone text-sm max-w-lg rounded-md overflow-auto text-black w-full px-3 sm:px-0 mb-4">
-                            <input
-                                type="text"
-                                placeholder="Phone Number (e.g., 123-456-7890)"
-                                value={phoneNumber}
-                                onChange={handlePhoneNumberChange}
-                                className="pl-2 px-3 py-3 w-full rounded"
-                            />
-                        </div>
-                        <div className="sign__in pb-7 max-w-lg w-full px-3 sm:px-0">
-                            <button type="submit" className="bg-[#fc291d] hover:bg-[#e7453c] text-white font-bold py-2 px-4 rounded w-full max-w-lg hover:scale-105 duration-300">Request Consultation</button>
-                        </div>
-                        <div className="agree pb-6 text-center md:text-start text-xs md:text-base">
-                            <input
-                                type="checkbox"
-                                id="agree"
-                                name="agree"
-                                checked={agreed}
-                                onChange={() => setAgreed(!agreed)}
-                            />
-                            <label htmlFor="agree" className="pl-2">
-                                I agree to the{" "}
-                                <button
-                                    type="button"
-                                    onClick={() => navigate("/terms-conditions")}
-                                    className="text-[#fc291d] underline"
-                                >
-                                    terms and conditions
-                                </button>
-                            </label>
-                        </div>
-                        <div className="confirm__18 max-w-2xl text-xs text-center md:text-center md:text-sm">
-                            <p>By pressing "Request Consultation", you confirm that you are 18 or older. You understand that we may use your phone number to contact you regarding our financial advisory services.</p>
-                        </div>
-                    </form>
-                </div>
+                </form>
+                <p className="text-xs sm:text-sm text-center mt-6 md:mx-20">
+                    By pressing "Request Consultation", you confirm that you are 18 or older. You understand that we may
+                    use your phone number to contact you regarding our financial advisory services.
+                </p>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,72 +1,99 @@
-import first from "./../../assets/111.svg";
-import second from "./../../assets/222.svg";
-import third from "./../../assets/333.svg";
-import forth from "./../../assets/444.svg";
-import fith from "./../../assets/555.svg";
-import six from "./../../assets/666.svg";
-
-const what_help = [
+const lessons = [
     {
-        "id": 1,
-        "name": "Investing",
-        "description": "Create an investment strategy to help you achieve your long-term financial goals.",
-        img: first
+        id: 1,
+        name: "Mastering Money Management",
+        price: "£499",
+        description: [
+            "📚 Expert-led video lessons",
+            "🧩 Interactive exercises and quizzes",
+            "📝 Real-life case studies and examples",
+            "💼 Personalized financial planning templates",
+            "🧪 Practical case studies and simulations",
+        ],
     },
     {
-        "id": 2,
-        "name": "Budget",
-        "description": "Build a personalized spending plan to track your finances and align your priorities, including reducing debt.",
-        img: second
+        id: 2,
+        name: "Advanced Financial Mastery",
+        price: "£999",
+        description: [
+            "🎥 Advanced video tutorials led by industry experts",
+            "🛠️ Hands-on workshops with real-world financial scenarios",
+            "📊 Exclusive templates for advanced financial planning",
+            "🌐 Access to webinars and Q&A sessions with professionals",
+        ],
     },
     {
-        "id": 3,
-        "name": "Retirement",
-        "description": "Plan effectively for retirement, ensuring you can live comfortably in the future without compromising your current lifestyle.",
-        img: third
+        id: 3,
+        name: "Premium Financial Strategies",
+        price: "£2,499",
+        description: [
+            "👨‍💼 Private one-on-one coaching sessions with financial experts",
+            "🤝 Access to a members-only mastermind group",
+            "🔍 In-depth case studies of ultra-high-net-worth strategies",
+            "🛎️ VIP support and direct access to course instructors",
+            "🔄 Lifetime access to course updates",
+        ],
     },
-    {
-        "id": 4,
-        "name": "Insurance",
-        "description": "Ensure you have the right insurance policies to protect you and your loved ones from unexpected life events.",
-        img: forth
-    },
-    {
-        "id": 5,
-        "name": "Stewardship",
-        "description": "Handle your finances responsibly, using principles of wisdom and generosity.",
-        img: fith
-    },
-    {
-        "id": 6,
-        "name": "Family",
-        "description": "Secure your family’s future by planning for education, inheritance, and other key life events.",
-        img: six
-    }
 ];
 
-
 const What_Help = () => {
-    return ( 
-        <div className="what_help flex py-10 w-full justify-center text-center px-2 md:px-6 lg:px-8 xl:px-0">
-            <div className="items-center max-w-screen-xl flex flex-col">    
-                <div className="title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    <p>How We Can Help You</p>
-                </div>
-                <div className="help__info grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-0 ">
-                    {what_help.map((item) => (
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    return (
+        <div className="what_help flex py-10 w-full justify-center text-center px-4 lg:px-8 xl:px-0 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600">
+            <div className="max-w-screen-xl flex flex-col items-center">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+                    Courses We Provide
+                </h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 md:px-0">
+                    {lessons.map((lesson, index) => (
                         <div
-                            key={item.id}
-                            className="flex flex-col items-center text-center p-4 rounded-lg shadow-md hover:scale-105 duration-300"
+                            key={lesson.id}
+                            className={`group relative flex flex-col items-center p-6 rounded-lg shadow-2xl bg-gradient-to-br from-white/5 to-white/20 backdrop-blur-md border border-white/30 transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ${index === 2 && 'md:col-span-2 md:justify-self-center lg:col-span-1'
+                                }`}
                         >
-                            <img src={item.img} alt={item.name} className="w-16 h-16 mb-4" />
-                            <h3 className="text-xl font-semibold">{item.name}</h3>
-                            <p className="mt-2 text-gray-600 text-base md:text-lg">{item.description}</p>
+                            <div className="absolute inset-0 z-[-1] bg-gradient-to-tr from-blue-500 via-purple-500 to-indigo-600 opacity-10 rounded-lg group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors duration-300">
+                                {lesson.name}
+                            </h3>
+                            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 mb-4">
+                                {lesson.price}
+                            </p>
+                            <div className="text-sm sm:text-base md:text-lg text-white/80 group-hover:text-white whitespace-pre-line leading-loose text-start min-h-40 h-full">
+                                {lesson.description.map((line, idx) => (
+                                    <p key={idx} className="mb-2">
+                                        {line}
+                                    </p>
+                                ))}
+                            </div>
+                            <button
+                                onClick={scrollToTop}
+                                className="mt-6 bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 px-5 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 text-base sm:text-lg"
+                            >
+                                Enroll Now
+                            </button>
                         </div>
                     ))}
+                </div>
+
+                {/* Call to Action */}
+                <div className="cta mt-12 text-center">
+                    <p className="text-lg sm:text-xl md:text-2xl text-white mb-6">
+                        Did you decide which lesson you'd like to take? <br />
+                        Complete the form above, and we’ll call you!
+                    </p>
+                    <button
+                        onClick={scrollToTop}
+                        className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+                    >
+                        Complete the Form
+                    </button>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default What_Help;

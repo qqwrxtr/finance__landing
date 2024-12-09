@@ -1,10 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Contact_Us = () => {
-    const navigate = useNavigate();
-
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -62,62 +60,64 @@ const Contact_Us = () => {
     };
 
     return (
-        <div className="contact-us flex flex-col items-center px-4 py-10 sm:px-10 lg:px-20 bg-[#1d1d1d] text-white">
-            <div className="w-full max-w-3xl flex justify-between items-center mb-[5px]">
-                <Link to="/" className="text-[#fc291d] hover:underline">
+        <div className="contact-us flex flex-col items-center px-6 py-10 sm:px-12 lg:px-24 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 text-white">
+            <div className="w-full max-w-7xl flex justify-between items-center mb-4">
+                <Link to="/" className="text-yellow-300 hover:underline text-lg sm:text-xl">
                     ← Go Back
                 </Link>
             </div>
-            <hr className="w-full max-w-3xl border-t border-gray-700 mb-8" />
+            <hr className="w-full max-w-7xl border-t border-white-700 mb-8" />
 
-            <div className="content w-full max-w-3xl text-center">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#fc291d] mb-6">Contact Us</h1>
-                <p className="text-base md:text-lg text-gray-300 mb-4">
+            <div className="content w-full max-w-7xl space-y-8 text-left bg-white bg-opacity-10 p-10 rounded-lg">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-6 drop-shadow-lg">
+                    Contact Us
+                </h1>
+                <p className="text-base md:text-lg text-white-300 mb-4">
                     We're here to help. Reach out with any questions or inquiries, and our team will get back to you promptly.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 mb-8">
+                <p className="text-base md:text-lg text-white-300 mb-8">
                     You can also reach us directly at{" "}
-                    <a href="mailto:support@cglimited.org" className="text-[#fc291d] hover:underline">
+                    <a href="mailto:support@cglimited.org" className="text-yellow-300 hover:underline">
                         support@cglimited.org
                     </a>.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                        <label className="block text-left text-sm font-medium text-gray-400 mb-1">Name</label>
+                        <label className="block text-left text-sm font-medium text-white-400 mb-1">Name</label>
                         <input
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
                             placeholder="Your Name"
-                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#fc291d]"
+                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         />
                     </div>
                     <div>
-                        <label className="block text-left text-sm font-medium text-gray-400 mb-1">Email</label>
+                        <label className="block text-left text-sm font-medium text-white-400 mb-1">Email</label>
                         <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
                             placeholder="Your Email"
-                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#fc291d]"
+                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         />
                     </div>
                     <div>
-                        <label className="block text-left text-sm font-medium text-gray-400 mb-1">Message</label>
+                        <label className="block text-left text-sm font-medium text-white-400 mb-1">Message</label>
                         <textarea
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
                             placeholder="Your Message"
                             rows="5"
-                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#fc291d]"
+                            className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-2 px-4 rounded-md bg-[#fc291d] text-white font-semibold hover:bg-red-700 transition duration-300"
+                        className="w-full py-4 px-4 rounded-md bg-yellow-300 text-black font-semibold hover:scale-105 transition duration-300"
                     >
                         Send Message
                     </button>
