@@ -14,7 +14,7 @@ const Header = () => {
                             className="w-full transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
-                    <div className="logo__name text-2xl ml-3 sm:text-3xl md:text-4xl font-bold text-white group-hover:text-yellow-300 drop-shadow-md">
+                    <div className="logo__name text-2xl ml-3 sm:text-3xl font-bold text-white group-hover:text-yellow-300 drop-shadow-md">
                         <p>C<span className="hidden md:!inline">learpath</span> G<span className="hidden md:!inline">roup</span> L<span className="hidden md:!inline">imited</span></p>
                     </div>
                 </a>

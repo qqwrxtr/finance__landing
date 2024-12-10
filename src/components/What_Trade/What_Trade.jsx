@@ -58,7 +58,7 @@ const What_Help = () => {
                             <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors duration-300">
                                 {lesson.name}
                             </h3>
-                            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 mb-4">
+                            <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 mb-4">
                                 {lesson.price}
                             </p>
                             <div className="text-sm sm:text-base md:text-lg text-white/80 group-hover:text-white whitespace-pre-line leading-loose text-start min-h-40 h-full">
@@ -70,7 +70,7 @@ const What_Help = () => {
                             </div>
                             <button
                                 onClick={scrollToTop}
-                                className="mt-6 bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 px-5 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 text-base sm:text-lg"
+                                className="mt-6 bg-yellow-300 hover:bg-yellow-200 text-black font-bold py-2 px-5 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 text-base sm:text-lg"
                             >
                                 Enroll Now
                             </button>
@@ -86,7 +86,7 @@ const What_Help = () => {
                     </p>
                     <button
                         onClick={scrollToTop}
-                        className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+                        className="bg-yellow-300 hover:bg-yellow-200 text-black font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
                     >
                         Complete the Form
                     </button>

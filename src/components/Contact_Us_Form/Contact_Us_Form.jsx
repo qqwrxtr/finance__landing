@@ -116,14 +116,14 @@ const Contact_Us = () => {
                     <div className="sign__in w-full max-w-lg">
                         <button
                             type="submit"
-                            className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+                            className="w-full bg-yellow-300 hover:bg-yellow-200 text-black font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
                         >
                             Send Message
                         </button>
                     </div>
 
                     {/* Disclaimer */}
-                    <div className="confirm__18 text-xs text-center text-white mt-4">
+                    <div className="confirm__18 text-xs text-center text-white mt-8">
                         <p>
                             By submitting this form, you agree that we may contact you
                             regarding your inquiry and send you updates about our services.
