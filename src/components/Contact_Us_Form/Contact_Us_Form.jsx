@@ -47,7 +47,7 @@ const Contact_Us = () => {
 
     return (
         <div className="contact-method py-10 w-full bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 backdrop-blur-md bg-opacity-20 flex justify-center items-center">
-            <div className="form glass__effect bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md mx-8 p-6 sm:p-10 lg:p-12 max-w-screen-xl w-full">
+            <div className="form glass__effect bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md mx-4 md:mx-8 p-6 sm:p-10 lg:p-12 max-w-screen-xl w-full">
                 <form
                     onSubmit={handleSubmit}
                     className="form flex flex-col items-center"
